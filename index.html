@@ -1,21 +1,5 @@
 <!DOCTYPE html>
-
 <title>INDEX - WELCOME</title>
-<meta charset="utf-8">
-
-<meta name="color:Footer" content="#eaeaea" />
-<meta name="color:Links" content="#666666" />
-
-<meta name="if:Show Search" content="1" />
-<meta name="if:Show Pages" content="1" />
-<meta name="if:Rounded Corners" content="1" />
-<meta name="if:Rounded Sidebar Image" content="0" />
-<meta name="if:Shadow" content="0" />
-<meta name="if:Show Tags" content="1" />
-<meta name="if:Show Album Art on Audio Posts" content="1" />
-<meta name="if:Enable Jump Pagination" content="0" />
-<meta name="if:Stretch Background Image" content="0" />
-
 <style>
 
 body {
@@ -28,9 +12,14 @@ body {
 
 /* POST CONTAINER */
 section {
-    width: 640x;
+    width: 640px;
     float: left;
     margin-top: 48px;
+	background: #33ff77 
+    font-family: Helvetica;
+    font-size: 14px;
+	border: 4px; 
+	border-color: #00ee77;
 }
 /* POSTS */  
 section article {
@@ -41,105 +30,19 @@ section article {
     position: relative;
 }
 
-/* POST TEXT */                  
-section article .copy {
-    color: #000000;
-    padding: 12px;
-    line-height: 16px;
-}
-    
-section article .copy a {
-    color: #666666;
-    text-decoration: underline;
-}
-
-section article .copy p {
-    margin: 12px 0 0 0;
-    padding: 0;
-}
-
-section article .copy pre {
-    margin: 12px 0px 12px 0px;
-    padding: 12px;
-    background-color: #e6e6e6;
-    font: normal 12px Courier, monospace;
-    overflow: auto;
-}
-
-section article .copy > p:first-child {
-    margin-top: 0;
-}
-
-section article .copy img {
-    max-width: 100%;
-}
-
-/* POST FOOTER */
-section article footer {
-    background: #ffffff;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    font-family: Courier;
-    font-size: 12px;
-    color: #666666;
-    padding: 6px 12px;
-    margin-top: 12px;
-} 
-section article footer .date {
-    width: 67%;
-    float: left;
-    color: #666666;
-}
-section article footer .tags a {
-    color: #666666;
-    text-decoration: underline;
-}
-section article footer .tags .tag-commas:last-child {
-    display: none;
-}
-
-/* space between posts*/
-section .bottom {
-    width: 640px;
-    height: 48px;
-    margin: 0 auto;
-}
-section #searchresults {
-    color: #fff;
-    margin: 0 0 16px 0;
-    font-family: Helvetica;
-    font-size: 20px;
-}
-section #searchresults .search_query {
-    font-weight: bold;
-}
-section #searchresults .search_query:before {
-    content: '“';
-}
-section #searchresults .search_query:after {
-    content: '”';
-}
-
 /* SIDEBAR */
 #sidebar {
     padding-bottom: 12px;
     background-color:#ffffff;
     position: fixed;
     right: calc(25% - 256px);
-    {block:IfRoundedCorners}
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    {/block:IfRoundedCorners}
+	border: 4px; 
+	border-color: #00ee77;
     margin-top: 64px;
     width: 256px;
     color: #33ff77;
     font-family: {Helvetica}
-}
-#sidebar a {
-    color: #33ff77;
-}
+	
 /* sidebar pic */
 #sidebar #top #avatar {
     top: -24px;
@@ -147,13 +50,10 @@ section #searchresults .search_query:after {
     margin-left: 24px;
 }
 #avatar img {
-    {block:IfRoundedSidebarImage}
-    border-radius: 8px;
-    {/block:IfRoundedSidebarImage}
-	
     max-width: 256px;
     margin: 0 auto;
 }
+
 /* sidebar description */
 #sidebar #top #description {
     color: #000000;
