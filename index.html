@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<title>{Title}</title>
+<title>INDEX - WELCOME</title>
 <meta charset="utf-8">
 
 <meta name="color:Footer" content="#eaeaea" />
@@ -173,46 +173,15 @@ section #searchresults .search_query:after {
 <body>
 
 <section>
-    {block:Posts}
         <article>
-            {block:Text}
-                {block:Title}<div class="title">{Title}</div>{/block:Title}
-                <div class="copy">{Body}</div>
-            {/block:Text}
+            <p> Welcome to my page! My name is Zacharie. </p>
 </section>
 
 <!-- SIDEBAR -->
 <div id="sidebar">
     <div id="top">
         <div id="avatar"><a href="/"><img src="{image:Sidebar}" /></a></div>
-        <div id="description">{Description000}</div>
-        
-        {block:IfShowPages}
-        <div id="pages" class="ask_and_submit">
-            {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
-            {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-            <div class="clear"></div>
-        </div>
-        
-        {block:HasPages}
-            <div id="pages">
-                {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
-                <div class="clear"></div>
-            </div>
-        {/block:HasPages}
-        {/block:IfShowPages}
-        
-        {block:IfShowSearch}
-        <div id="search">
-            <form action="/search" method="get" id="search-form">
-                <input type="text" name="q" class="query" value="{SearchQuery}" />
-                <input type="submit" value="Search" class="submit" />
-                <div class="clear"></div>
-            </form>
-        </div>
-        {/block:IfShowSearch}
-
-        
+        <div id="description">THIS PAGE IS A WIP!</div>
 <div class="clear"></div>
 </div>
 
