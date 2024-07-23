@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 
-<title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
-{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-<link rel="shortcut icon" href="{Favicon}" />
-<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
-<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+<title>{Title}</title>
 <meta charset="utf-8">
 
-<!-- CUSTOM APPEARANCE OPTIONS -->
 <meta name="color:Background" content="#33ff77" />
 <meta name="color:Footer" content="#eaeaea" />
 <meta name="color:Links" content="#666666" />
@@ -36,30 +31,12 @@
 
 <style>
 
-body 
-{
-    background: {color:Background} url('{image:Background}') top left fixed repeat;
+body {
+    background: #33ff77 
     margin: 0;
     padding: 0;
     font-family: {font:Body};
     font-size: 14px;
-    {block:IfStretchBackgroundImage}
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    {block:IfStretchBackgroundImage}
-}
-
-/* clearfix */
-.clear {
-    clear: both;
-    height: 0px;
-    overflow: hidden;
-}
-
-a img {
-    border: none;
 }
 
 /* POST CONTAINER */
@@ -73,35 +50,15 @@ section article {
     left: 30%;
     font-family: {font:Body};
     background: {color:Posts};
-    padding: 10px;
+    padding: 102px;
     position: relative;
-	
-    {block:IfRoundedCorners}
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    {/block:IfRoundedCorners}
-    {block:IfShadow}
-    -webkit-box-shadow: -8px 8px 3px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: -8px 8px 3px 0px rgba(0,0,0,0.35);
-    box-shadow: -8px 8px 3px 0px rgba(0,0,0,0.35);
-    {block:IfShadow}
-}
-
-
-/* UNIQUE CODE FOR INDIVIDUAL POST TYPES */   
-
- /* photo posts */  
-section article .media {
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 /* POST TEXT */                  
 section article .copy {
     color: {color:Body Text};
-    padding: 10px;
-    line-height: 15px;
+    padding: 12px;
+    line-height: 16px;
 }
     
 section article .copy a {
@@ -110,15 +67,15 @@ section article .copy a {
 }
 
 section article .copy p {
-    margin: 10px 0 0 0;
+    margin: 12px 0 0 0;
     padding: 0;
 }
 
 section article .copy pre {
-    margin: 10px 0px 10px 0px;
-    padding: 10px;
+    margin: 12px 0px 12px 0px;
+    padding: 12px;
     background-color: #e6e6e6;
-    font: normal 11px Courier, monospace;
+    font: normal 12px Courier, monospace;
     overflow: auto;
 }
 
@@ -129,6 +86,7 @@ section article .copy > p:first-child {
 section article .copy img {
     max-width: 100%;
 }
+
 /* POST FOOTER */
 section article footer {
     background: {color:Footer};
@@ -136,29 +94,15 @@ section article footer {
     -webkit-border-radius: 4px;
     border-radius: 4px;
     font-family: {font: Accent};
-    font-size: 11px;
+    font-size: 12px;
     color: {color:Links};
-    padding: 5px 10px;
-    margin-top: 10px;
-}
-section article footer.for_permalink:hover {
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-}
+    padding: 6px 12px;
+    margin-top: 12px;
+} 
 section article footer .date {
     width: 67%;
     float: left;
-    color: #666;
-}
-section article footer .notes {
-    width: 33%;
-    float: right;
-    text-align: right;
-    color: #666;
-}
-section article footer .notes a {
-    color: {color:Links};
+    color: #666666;
 }
 section article footer .tags a {
     color: {color:Links};
@@ -167,119 +111,16 @@ section article footer .tags a {
 section article footer .tags .tag-commas:last-child {
     display: none;
 }
-section article footer.with_source_url .tags {
-    max-width: 330px;
-    float: left;
-}
-section article footer.with_source_url .source_url {
-    float: right;
-    max-width: 160px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-section article footer.with_source_url .source_url img {
-    vertical-align: top;
-    -moz-opacity: 0.5;
-    opacity: 0.5;
-}
-section article footer.with_source_url .source_url:hover img {
-    -moz-opacity: 0.7;
-    opacity: 0.7;
-}
-section article a {
-    color: {color:Links};
-    text-decoration: none;
-}
-blockquote {
-    border-left: 3px solid {color:Blockquote};
-    padding: 0px 0px 0 15px;
-    margin: 10px 0px 12px 0px;
-}
-section article .copy blockquote:last-child {
-    /* gets rid of the gap between the blockquote and footer */
-    margin-bottom: 0px!important;
-}
+
 /* space between posts*/
 section .bottom {
     width: 640px;
     height: 48px;
     margin: 0 auto;
 }
-/* pagination */
-section #navigation {
-    text-align: right;
-    padding-bottom: 48px;
-    text-transform: uppercase;
-}
-section #navigation a {
-    background-color: #fff;
-    color: {color:Background};
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-left: 25px;
-}
-section #navigation a:hover {
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-}
-section #navigation.jump_pagination {}section #navigation.jump_pagination a {
-    margin: 0 0 0 4px;
-}
-section #navigation.jump_pagination .current_page {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid #fff;
-    padding: 3px 8px;
-    margin: 0 0 0 4px;
-    cursor: default;
-}
-section #navigation.jump_pagination .jump_page {}section article .notecontainer {
-    background: #eaeaea;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    font-family: {font:Accent};
-    font-size: 11px;
-    color: #666;
-    margin-top: 10px;
-    margin-bottom: -10px;
-}
-section article .notecontainer a {
-    color: #666;
-    text-decoration: underline;
-}
-section article .notecontainer ol.notes {
-    padding: 0px 0 10px 0;
-    list-style-type: none;
-    font-size: 11px;
-}
-section article .notecontainer ol.notes li.note {
-    padding: 10px 10px 0 10px;
-}
-section article .notecontainer ol.notes li.note img.avatar {
-    vertical-align: -4px;
-    margin-right: 10px;
-    width: 16px;
-    height: 16px;
-}
-section article .notecontainer ol.notes li.note span.action {
-    font-weight: normal;
-}
-section article .notecontainer ol.notes li.note .answer_content {
-    font-weight: normal;
-}
-section article .notecontainer ol.notes li.note blockquote {
-    border-left: 2px solid #666;
-    padding: 4px 10px;
-    margin: 10px 0px 0px 25px;
-}
-section article .notecontainer ol.notes li.note blockquote a {
-    text-decoration: none;
-}
 section #searchresults {
     color: #fff;
-    margin: 0 0 15px 0;
+    margin: 0 0 16px 0;
     font-family: {font:Body};
     font-size: 20px;
 }
@@ -292,12 +133,13 @@ section #searchresults .search_query:before {
 section #searchresults .search_query:after {
     content: '”';
 }
+
 /* SIDEBAR */
 #sidebar {
     padding-bottom: 12px;
     background-color:{color:Posts};
     position: fixed;
-    right: calc(25% - 125px);
+    right: calc(25% - 256px);
     {block:IfRoundedCorners}
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -307,12 +149,6 @@ section #searchresults .search_query:after {
     width: 256px;
     color: {color:Background};
     font-family: {font:Body}
-	
-    {block:IfShadow}
-    -webkit-box-shadow: -8px 8px 3px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: -8px 8px 3px 0px rgba(0,0,0,0.35);
-    box-shadow: -8px 8px 3px 0px rgba(0,0,0,0.35);
-    {block:IfShadow}
 }
 #sidebar a {
     color: {color:Background};
@@ -321,7 +157,7 @@ section #searchresults .search_query:after {
 #sidebar #top #avatar {
     top: -24px;
     position: relative;
-    margin-left: 20px;
+    margin-left: 24px;
 }
 #avatar img {
     {block:IfRoundedSidebarImage}
@@ -331,44 +167,6 @@ section #searchresults .search_query:after {
     max-width: 256px;
     margin: 0 auto;
 }
-/* sidebar links to pages */
-#sidebar #top #pages {
-    {block:IfNotShowSearch}
-    margin: 0 20px 0px 20px;
-    {/block:IfNotShowSearch}
-    {block:IfShowSearch}
-    margin: 0 20px 10px 20px;
-    {/block:IfShowSearch}
-    font-size: 12px;
-}
-#sidebar #top #pages.ask_and_submit {
-    display: none;
-    {block:AskEnabled}
-    display: block;
-    {/block:AskEnabled}
-    {block:SubmissionsEnabled}
-    display: block;
-    {/block:SubmissionsEnabled}
-}
-#sidebar #top #pages a.page {
-    display: block;
-    float: left;
-    background-color: {color:Background};
-    color: #fff;
-    padding: 4px 5px;
-    margin: 0 5px 5px 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-#sidebar #top #pages a.page:last-child {
-    margin-right: 0;
-}
-#sidebar #top #pages a.page:hover {
-    filter: alpha(opacity=90);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-}
-
 /* sidebar description */
 #sidebar #top #description {
     color: {color:Body Text};
@@ -382,178 +180,25 @@ section #searchresults .search_query:after {
     color: {color:Links};
     text-decoration: underline;
 }
-#sidebar #top #search {
-    margin: 0 24px;
-    background: #fff;
-    border: 1px solid {color:Background};
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-}
-/* searchbar */
-#sidebar #top #search form {
-    margin: 0;
-}
-#sidebar #top #search form .query {
-    padding: 8px;
-    border: none;
-    background: transparent;
-    outline: none;
-    width: 128px;
-    float: left;
-    color: {color:Background};
-}
-#sidebar #top #search form .submit {
-    background: {color:Background};
-    color: #fff;
-    border: none;
-    padding: 6px 8px;
-    float: right;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-#sidebar #top #search form .submit:hover {
-    filter: alpha(opacity=90);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";}
-#sidebar #top .heading {
-    color: #fff;
-    font-family: helvetica, arial, sans-serif;
-    font-size: 20px;
-    margin-top: 24px;
-    padding: 12px;
-    background-color: {color:Background};
-    -webkit-border-top-left-radius: 4px;
-    -webkit-border-top-right-radius: 4px;
-    -moz-border-radius-topleft: 4px;
-    -moz-border-radius-topright: 4px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-}
-#sidebar #top .content {
-    margin-top: 2px;
-    padding: 8px 10px;
-    background: #eaeaea;
-    color: #666;
-    font-size: 12px;
-    overflow: hidden;
-}
-#sidebar #top a {
-    text-decoration: none;
-}
-
-
 </style>
 <style type="text/css">{CustomCSS}</style>
 
 <body>
 
 <section>
-    {block:SearchPage}
-        {block:SearchResults}
-            <div id="searchresults">{lang:SearchResultCount results for SearchQuery 2}</div>
-        {/block:SearchResults}
-        
-        {block:NoSearchResults}
-            <div id="searchresults">{lang:No search results for SearchQuery 2}</div>
-        {/block:NoSearchResults}
-    {/block:SearchPage}
-    
     {block:Posts}
         <article>
-            {block:Photo}
-                <div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
-                {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
-            {/block:Photo}
-            {block:Photoset}
-                {Photoset-500}
-                {block:Caption}
-                    <div class="copy">{Caption}</div>
-                {/block:Caption}
-            {/block:Photoset}
-            
-            {block:Video}
-                <div class="media">{Video-500}</div>
-                {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
-            {/block:Video}
-
             {block:Text}
                 {block:Title}<div class="title">{Title}</div>{/block:Title}
                 <div class="copy">{Body}</div>
             {/block:Text}
-
-            {block:Date}
-                <a href="{Permalink}">
-                    <footer class="for_permalink">
-                        <div class="date">
-                            {block:Reblog}
-                                {lang:Reblogged TimeAgo from ReblogParentName} {block:RebloggedFromReblog}(<span style="text-transform:lowercase;">{lang:Originally from ReblogRootName}</span>){/block:RebloggedFromReblog}
-                            {/block:Reblog}
-                            
-                            {block:NotReblog}
-                                {lang:Posted TimeAgo from source}
-                            {/block:NotReblog}
-                        </div>
-                        <div class="notes">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
-                        <div class="clear"></div>
-                    </footer>
-                </a>
-            {/block:Date}
-            
-            <footer class="{block:ContentSource}with_source_url{/block:ContentSource}" style="
-                display:none;
-                {block:IfShowTags}{block:HasTags}display:block;{/block:HasTags}{/block:IfShowTags}
-                {block:ContentSource}display:block;{/block:ContentSource}
-            ">
-                {block:IfShowTags}
-                    {block:HasTags}<div class="tags">{lang:Tagged}: {block:Tags}<a href="{TagURL}">{Tag}</a><span class="tag-commas">, </span>{/block:Tags}.</div>{/block:HasTags}
-                {/block:IfShowTags}
-                
-                {block:ContentSource}
-                    <a href="{SourceURL}" class="source_url">
-                        {lang:Source}:
-                        {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
-                        {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
-                    </a>
-                {/block:ContentSource}
-                
-                <div class="clear"></div>
-            </footer>
-            
-            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
-        </article>
-        <div class="bottom"></div>
-    {/block:Posts}
-    
-    {block:Pagination}
-        <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
-            {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
-            
-            {block:IfEnableJumpPagination}
-                {block:JumpPagination length="5"}
-                    {block:CurrentPage}
-                        <span class="current_page">{PageNumber}</span>
-                    {/block:CurrentPage}
-                    
-                    {block:JumpPage}
-                        <a class="jump_page" href="{URL}">{PageNumber}</a>
-                    {/block:JumpPage}
-                    
-                {/block:JumpPagination}
-            {/block:IfEnableJumpPagination}
-            
-            {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
-        </div>
-    {/block:Pagination}
-    
 </section>
 
 <!-- SIDEBAR -->
 <div id="sidebar">
     <div id="top">
         <div id="avatar"><a href="/"><img src="{image:Sidebar}" /></a></div>
-        <div id="description">{Description}</div>
+        <div id="description">{Description000}</div>
         
         {block:IfShowPages}
         <div id="pages" class="ask_and_submit">
