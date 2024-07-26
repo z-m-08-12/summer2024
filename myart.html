@@ -45,6 +45,20 @@
           overflow: auto;
         } 
 		
+/* imgcolumns */
+		.column {
+		  float: left;
+		  width: 33.33%;
+		  padding: 8px;
+		}
+
+/* imgrows */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		} 
+		
 /* refresh */ 
 		.rfrsh {
 		bottom: 0px; 
@@ -77,10 +91,29 @@
 </div> 
     
 <div class="window">
-    <h3><i>
-        YOU'RE ON THE MY ART PAGE!<br>
-		1234567890987654321<br>TESTING<br>TEST<br>TESTING<br>a<br>TESTING<br>TESTESTES<br>TESTING<br>aaaa77564574567<br>TESTING<br>AAAAAA<br>TESTING<br>a<br>TESTING<br>a<br>TESTO<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br>a<br>TESTING<br> 
-    </i></h3> 
+	<div class="row">
+	  <div class="column">
+		<img src="pf_01.png">
+	  </div>
+	  <div class="column">
+		<img src="pf_03.png">
+	  </div>
+	  <div class="column">
+		<img src="pf_06.png">
+	  </div>
+	</div> <br> 
+		<div class="row">
+	  <div class="column">
+		<img src="pf_02.png">
+	  </div>
+	  <div class="column">
+		<img src="pf_06.png">
+	  </div>
+	  <div class="column">
+		<img src="pf_07.png">
+	  </div>
+	</div> <br> 
+	<p> Testing caption! rah rah rah </p>
 </div>
 
 <div class="rfrsh"> 
