@@ -5,6 +5,61 @@
 </head>
 <body>
 
+<style>
+/* link */
+        a {
+            color:#00cccc;
+        }
+        a:hover {
+            color: #ee77ab;
+			font-style: italic;
+        }
+        
+/* body */ 
+        body {
+          text-align: center; 
+          font-family: Helvetica, sans-serif; 
+          background-color: #77ff66;
+		  background-image: url('repeatingbg.png');
+		  color: #ffffff;
+        }
+        
+/* sidebar */
+        .sidebar {
+          width: 200px;
+          height: 468px;
+          background: white;
+          border: 4px solid #ee77ab;
+          padding: 36px;
+          margin-left: 64px;
+          position: fixed;
+          top: 128px;
+		  color: #000000;
+        } 
+        
+/* window */
+        .window {
+          width: calc(45%); 
+		  height: 468px;
+          background: white; 
+          border: 4px solid #ee77ab;
+          padding: 36px;
+          position: fixed; 
+          top: 128px;
+          left: calc(30%);
+          overflow: auto;
+		  color: #000000;
+        } 
+		
+/* refresh */ 
+		.rfrsh {
+		bottom: 0px; 
+		right: 0px; 
+		position: fixed; 
+		margin: 8px;
+		}
+</style>
+
 <script type="text/javascript">
 // <![CDATA[
 var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
@@ -203,61 +258,6 @@ function newColour() {
 }
 // ]]>
 </script>
-
-<style>
-/* link */
-        a {
-            color:#00cccc;
-        }
-        a:hover {
-            color: #ee77ab;
-			font-style: italic;
-        }
-        
-/* body */ 
-        body {
-          text-align: center; 
-          font-family: Helvetica, sans-serif; 
-          background-color: #77ff66;
-		  background-image: url('repeatingbg.png');
-		  color: #ffffff;
-        }
-        
-/* sidebar */
-        .sidebar {
-          width: 200px;
-          height: 468px;
-          background: white;
-          border: 4px solid #ee77ab;
-          padding: 36px;
-          margin-left: 64px;
-          position: fixed;
-          top: 128px;
-		  color: #000000;
-        } 
-        
-/* window */
-        .window {
-          width: calc(45%); 
-		  height: 468px;
-          background: white; 
-          border: 4px solid #ee77ab;
-          padding: 36px;
-          position: fixed; 
-          top: 128px;
-          left: calc(30%);
-          overflow: auto;
-		  color: #000000;
-        } 
-		
-/* refresh */ 
-		.rfrsh {
-		bottom: 0px; 
-		right: 0px; 
-		position: fixed; 
-		margin: 8px;
-		}
-</style>
 
     <h2 color="white">
         INDEX - WELCOME! 
